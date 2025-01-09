@@ -7,10 +7,9 @@ const IDCard = () => {
     const [student, setStudent] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const { id } = useParams(); // Get the student ID from the URL
+    const { id } = useParams(); 
 
     useEffect(() => {
-        // Fetch student details from API
         const fetchStudent = async () => {
             try {
                 const response = await axios.get(`http://localhost:5000/api/students/${id}`);
